@@ -1,0 +1,321 @@
+//colore background;
+$color: rgb(150, 195, 202);
+//colore background bio;
+$color1: rgb(71, 138, 150);
+//colore dell'header più scuro rispetto a quello del background ;
+$color2: darken($color, 20%);
+//colore testi;
+$color3: rgb(1, 66, 70);
+//colore link;
+$color4: rgb(0, 63, 181);
+//colore link hover;
+$color5: rgb(0, 121, 4);
+//colore menù;
+$color6: rgba(72, 170, 164, 0.8);
+//colore titoli
+$color7: rgb(0, 33, 99);
+//font titoli e link;
+$font-family: Georgia, 'Times New Roman', Times, serif;
+//font paragrafi;
+$font-family1: Verdana, Geneva, Tahoma, sans-serif;
+//spessore font;
+$font-weight: bold;
+//per centrare testi e contenuti;
+$text-align: center;
+$justify-content: center;
+$align-items: center;
+$padding-top: 30px;
+$padding-bottom: 30px;
+
+//caratteristiche navbar;
+#navbar {
+    background-color: $color2;
+
+}
+
+//logo posizionato sul lato sinistro della navbar con un margine sinistro e delle dimensioni specifiche;
+.logo {
+    float: left;
+    margin-left: 40px;
+    width: 60px;
+    height: 30px;
+
+}
+
+// indirizzo mail sul lato destro della navbar,con un margine definito e colore della scritta definito;
+#mail {
+    float: right;
+    color: $color4;
+    margin-right: 40px
+}
+
+//caratteristiche principali degli elementi nel body;
+
+body {
+    background-color: $color;
+    font-family: $font-family1;
+    color: $color3;
+
+}
+
+
+//caratteristiche principali dei vari link;
+a {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    color: $color4;
+}
+
+//caratteristiche principali dei vari link in stato di hover;
+a:hover {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    color: $color5;
+}
+
+
+//caratteristiche dei principali titoli (h1/h2...) a parte quello della biografia);
+#titolo,
+#titolo2 {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    color: $color7;
+    font-size: 6vw;
+    padding-top: $padding-top;
+    padding-bottom: $padding-bottom;
+}
+
+
+//caratteristiche copertina;
+
+#title {
+    font-size: 10vw;
+    font-family: $font-family;
+    font-weight: $font-weight;
+    color: rgb(7, 20, 46);
+}
+
+
+#banner {
+    background-image: url(../img/cazzanelli_sfondobanner.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: $justify-content;
+
+}
+
+//Caratteristiche biografia;
+#biografia {
+    background-color: $color1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: $justify-content;
+    padding-top: $padding-top;
+    padding-bottom: $padding-bottom;
+    padding-right: 20px;
+    padding-left: 15px;
+}
+
+
+
+//Titolo biografia al posto di un text-color volevo avere un "text-background-image";
+#textmask {
+    //contenitore flessibile per i suoi elementi figli diretti consentendo un controllo più semplice e potente sul layout dei suoi contenuti;    
+    display: flex;
+    //volevo che il titolo fosse centrato rispetto all'asse principale del contenitore;
+    justify-content: $justify-content;
+    //margine superiore per centrare maggiormente il titolo;
+
+    //caratteristiche principali del titolo;
+    font-size: 6vw;
+    font-family: $font-family1;
+    font-weight: $font-weight;
+    //caratteristiche del background image;
+    background-image: url('../img/cazzanelli_sfondobio.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    //colore del titolo;
+    color: transparent;
+    //l'immagine di background verrà visualizzata solo dove il testo è presente;
+    background-clip: text;
+    margin: 25px;
+
+    // -webkit-background-clip: text; è considerato obsoleto tuttavia potrei dover utilizzare il prefisso per garantire la compatibilità con le versioni precedenti di browser WebKit come Safari e Chrome;
+
+
+}
+
+// ho creato un padding superiore sia alla sezione pubblicazioni intera (titolo+2caroselli);
+
+#pubblicazioni {
+    padding-top: $padding-top;
+}
+
+// sia ai due caroselli in modo da dare maggior spazio tra titolo ed elementi;
+#pubblicazione-m {
+    padding-top: $padding-top;
+
+}
+
+//ridurre spazio tra i control del carosello;
+.carousel-control-prev {
+    margin-left: 11vw;
+
+}
+
+.carousel-control-next {
+    margin-right: 11vw;
+
+}
+
+//ho definito la dimensione e il colore dei due controlli;
+.carousel-control-prev-icon {
+    width: 20px;
+    height: 20px;
+    background-color: $color4;
+
+}
+
+.carousel-control-prev-icon:hover {
+    width: 20px;
+    height: 20px;
+    background-color: $color5;
+
+}
+
+.carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+    background-color: $color4;
+
+}
+
+.carousel-control-next-icon:hover {
+    width: 20px;
+    height: 20px;
+    background-color: $color5;
+
+}
+
+
+
+
+//  padding sopra e sotto l'elemento #illustrazioni, con un ulteriore padding solo ai lati per spaziatura uniform;
+#illustrazioni {
+    padding-top: $padding-top;
+    padding-bottom: $padding-bottom;
+    padding: 0 15px; // Applica padding solo ai lati
+}
+
+
+
+// Organizzo gli elementi della galleria in modo flessibile centrando il loro contenuto e aggiungendo spaziatura inferiore;
+#gallery-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+// Stabilisco le dimensioni  delle immagini all'interno degli elementi della galleria, garantendo che si adattino e applicando un bordo  con un colore specifico;
+#gallery-item .image {
+    width: 100%;
+    height: auto;
+    border: 3px solid $color2;
+
+}
+
+
+//caratteristiche principali footer;
+#contatti {
+    background-color: $color2;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+//caratteristiche toggle e menù;
+
+#toggle {
+    transform: scale(1.5);
+    width: 75px;
+    height: 30px;
+    position: fixed;
+    top: 50px;
+    right: 5px;
+    z-index: 1;
+    background-color: $color2;
+    border-color: $color1;
+}
+
+//colore testo su toggle quando non è attivo ne in hover;
+#testobtn {
+    color: $color4;
+}
+
+//caratteristiche elemento a del toggle in stato di hover (colore e opacità:1 ovvero l'elementoè visibile);
+#toggle:hover a {
+    color: $color5;
+    opacity: 1;
+}
+
+//caratteristiche elemento a quando lo stato del toggle è attivo (opacità:0 ovvero l'elemento non è visibile);
+#toggle.is-active a {
+    opacity: 0;
+}
+
+//caratteristiche icona del toggle;
+#toggle i {
+    opacity: 0;
+    position: fixed;
+    right: 30px;
+    bottom: 5px;
+}
+
+//caratteristiche icona su toggle quando è in stato di hover;
+#toggle.is-active:hover i {
+    color: $color5;
+    opacity: 1;
+}
+
+//caratteristiche icona su toggle quando lo stato del toggle è attivo (opacità:1 ovvero l'icona è visibile);
+#toggle.is-active i {
+    color: $color4;
+    opacity: 1;
+}
+
+//caratteristiche menu;
+#menu {
+    background-color: $color6;
+    width: 150px;
+    height: 250px;
+    position: fixed;
+    top: 30px;
+    right: -100vw;
+    transition: all .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color7;
+
+
+}
+
+//caratteristiche del menù quando è attivo;
+#menu.active {
+    right: 0;
+}
+
+
+
+/*per togliere i punti della lista*/
+li {
+    list-style-type: none;
+    padding-right: 25px;
+
+}
